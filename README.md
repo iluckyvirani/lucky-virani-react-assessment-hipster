@@ -1,69 +1,86 @@
-# React + TypeScript + Vite
+# Multi-Theme Switcher App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based web application developed using **React**, **TypeScript**, **Vite**, and **Tailwind CSS**. It is built as part of a frontend assessment and demonstrates a theme switcher with three distinct themes. Each theme significantly alters the layout, font, color scheme, and overall user experience.
 
-Currently, two official plugins are available:
+## Live Deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Deployed on Vercel: [View Live App](https://lucky-virani-react-assessment-hipst.vercel.app/)
 
-## Expanding the ESLint configuration
+No login is required to use the app.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Folder Structure
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+├── node_modules/
+├── public/
+├── src/
+│ ├── assets/
+│ │ └── react.svg
+│ ├── components/
+│ │ ├── Header.tsx
+│ │ ├── ProductGrid.tsx
+│ │ └── Sidebar.tsx
+│ ├── context/
+│ │ └── ThemeContext.tsx
+│ ├── pages/
+│ │ ├── About.tsx
+│ │ ├── Contact.tsx
+│ │ └── Home.tsx
+│ ├── App.css
+│ ├── App.tsx
+│ ├── index.css
+│ ├── main.tsx
+│ └── vite-env.d.ts
+├── .gitignore
+├── eslint.config.js
+├── index.html
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Three distinct themes:
+  - **Theme 1 (Default)**: Light, minimalist layout with sans-serif font
+  - **Theme 2**: Dark theme with sidebar and serif font
+  - **Theme 3**: Colorful card-based layout with playful font (e.g., Pacifico)
+- Theme switching via dropdown in the header
+- Theme state managed using React Context API
+- Theme persisted in localStorage across reloads
+- Responsive design for both mobile and desktop
+- Product data fetched from [Fake Store API](https://fakestoreapi.com/products)
+- Smooth animations during theme transitions
+- Multi-page routing (Home, About, Contact) via React Router
+- Type-safe codebase using TypeScript
+- No external UI libraries like Material UI or Ant Design used
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Context API
+- FakeStore API
+- Vercel (for deployment)
+
+---
+
+## Setup Instructions
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/iluckyvirani/Assignment_Junior_Full_Stack_Developer.git
+
+## Install dependencies
+
+npm install
+
+## Start development server
+
+npm run dev
+
+
