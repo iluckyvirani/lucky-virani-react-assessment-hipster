@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+html {
+    transition: background-color 0.4s ease, color 0.4s ease, font 0.4s ease;
+}
+
+:root {
+    /* Default Theme (Light) */
+    --bg-color: #f8f9fa;
+    --text-color: #111;
+    --header-bg: #ffffff;
+    --sidebar-bg: #e9ecef;
+    --accent-color: #4a89dc;
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Theme 1: Minimalist Light */
+.theme1 {
+    --bg-color: #FAF9EE;
+    --text-color: #111;
+    --header-bg: #EEEEEE;
+    --card-bg: #ffffff;
+    --sidebar-bg: #e9ecef;
+    --accent-color: #4a89dc;
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Theme 2: Dark Mode */
+.theme2 {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1a1a1a;
+    --card-bg: #1e1e1e;
+    --sidebar-bg: #1e1e1e;
+    --accent-color: #bb86fc;
+    --font-family: 'Playfair Display', serif;
+}
+
+/* Theme 3: Colorful Playful */
+.theme3 {
+    --bg-color: #ffe4ec;
+    --text-color: #3d003d;
+    --header-bg: #00809D;
+    --card-bg: #fcd5ce;
+    --sidebar-bg: #ffb6b9;
+    --accent-color: #ff9f1c;
+    --font-family: 'Pacifico', cursive;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+header {
+    background-color: var(--header-bg);
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+}
+
+button,
+.accent {
+    background-color: var(--accent-color);
+}
